@@ -5,7 +5,7 @@
 
 ## Demo
 
-[![Demo](https://raw.githubusercontent.com/kototuz/android-file-receiver/master/assets/video5321189322664205989.mp4)]
+https://github.com/user-attachments/assets/bfdc229e-a1b7-47b6-8ac4-644846808d41
 
 ## Build
 
