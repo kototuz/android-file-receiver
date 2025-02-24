@@ -85,9 +85,9 @@ public class MainActivity extends Activity {
                             throw new RuntimeException("Not all file size bytes arrived");
                         }
 
-                        int fileSize = ByteBuffer.wrap(fileSizeBytes).order(ByteOrder.LITTLE_ENDIAN).getInt();
+                        long fileSize = ByteBuffer.wrap(fileSizeBytes).order(ByteOrder.LITTLE_ENDIAN).getLong();
 
-                        int readedBytes = 0;
+                        long readedBytes = 0;
                         Uri docUri;
                         synchronized (outputTreeUri) {
                             docUri = DocumentsContract.createDocument(contentResolver, outputTreeUri, "plain/text", fileName);
@@ -95,14 +95,14 @@ public class MainActivity extends Activity {
                         OutputStream output = contentResolver.openOutputStream(docUri);
                         if (output != null) {
                             while (true) {
-                                int diff = fileSize - readedBytes;
+                                long diff = fileSize - readedBytes;
                                 if (diff == 0) {
                                     break;
                                 }
 
                                 int res;
                                 if (diff < READ_SIZE) {
-                                    res = input.read(contentBuffer, 0, diff);
+                                    res = input.read(contentBuffer, 0, (int)diff);
                                 } else {
                                     res = input.read(contentBuffer);
                                 }
@@ -114,7 +114,7 @@ public class MainActivity extends Activity {
 
                                 output.write(contentBuffer, 0, res);
                                 readedBytes += res;
-                                final int readed = readedBytes;
+                                final long readed = readedBytes;
                                 handler.post(new Runnable(){public void run(){ stateText.setText(fileName+"\n("+readed+"/"+fileSize+")"); }});
                             }
 
