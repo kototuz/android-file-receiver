@@ -14,6 +14,7 @@ public final class R {
         public static final int jetbrains_mono=0x7f020000;
     }
     public static final class id {
+        public static final int select_folder_button=0x7f040001;
         public static final int state_text=0x7f040000;
     }
     public static final class layout {

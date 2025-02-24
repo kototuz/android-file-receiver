@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Configuration
-ANDROID_HOME="sdk"
+ANDROID_HOME="/home/i0ne/Programming/3rd-party/android/sdk/"
 APP_LABEL_NAME=FileReceiver
 APP_COMPANY_NAME=kototuz
 APP_PRODUCT_NAME=file_receiver
