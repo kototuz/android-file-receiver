@@ -5,7 +5,7 @@
 
 ## Demo
 
-https://github.com/user-attachments/assets/bfdc229e-a1b7-47b6-8ac4-644846808d41
+https://github.com/user-attachments/assets/5a4396ff-aa93-4c09-b0b6-12abeacc190b
 
 ## Build
 
