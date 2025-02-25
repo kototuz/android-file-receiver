@@ -8,5 +8,5 @@
 8.  [X] Update format: `<file_name_length><file_name><file_size><file_content>`
 9.  [X] UI on phone
 10. [X] Button `select` in the android app
-11. [ ] Update the file sending format (it can't send big files)
+11. [X] Update the file sending format (it can't send big files)
 11. [ ] Recursive file sending 
